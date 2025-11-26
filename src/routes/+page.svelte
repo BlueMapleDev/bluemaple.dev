@@ -11,11 +11,12 @@
 					heroText = heroLine.substring(0, i + 1);
 					await delay(100);
 				}
+				await delay(2000);
 				for (let i = heroLine.length; i >= 0; i--) {
 					heroText = heroLine.substring(i, 0);
 					await delay(50);
 				}
-				await delay(1000);
+				await delay(500);
 			}
 		}
 	};
@@ -29,12 +30,12 @@
 			<div class="col-span-2 flex items-center font-mono text-5xl">{heroText} <span class="blinking">_</span></div>
 		</div>
 	</section>
-	<section id="about">
+	<!-- <section id="about">
 		<h2>Here to elevate your customer's shopify experience</h2>
 	</section>
 	<section id="tech"></section>
 	<section id="showcase"></section>
-	<section id="contact">Contact Us for a free quote</section>
+	<section id="contact">Contact Us for a free quote</section> -->
 </div>
 
 <style>
