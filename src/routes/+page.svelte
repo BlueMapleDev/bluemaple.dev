@@ -1,4 +1,7 @@
 <script lang="ts">
+	import Contact from '$lib/components/Contact.svelte';
+	import { onMount } from 'svelte';
+
 	let heroText = $state('');
 	let heroTextList: string[] = ['Shopify Development', 'E-commerce Solutions', 'Custom Storefronts', 'App Integrations'];
 
@@ -20,7 +23,9 @@
 			}
 		}
 	};
-	heroTextAnimation(heroTextList);
+	onMount(() => {
+		heroTextAnimation(heroTextList);
+	});
 </script>
 
 <div id="main">
@@ -30,12 +35,15 @@
 			<div class="col-span-2 flex items-center font-mono text-5xl">{heroText} <span class="blinking">_</span></div>
 		</div>
 	</section>
-	<!-- <section id="about">
+	<section id="about">
 		<h2>Here to elevate your customer's shopify experience</h2>
 	</section>
 	<section id="tech"></section>
 	<section id="showcase"></section>
-	<section id="contact">Contact Us for a free quote</section> -->
+	<section id="contact">
+		<h2>Contact Us for a free quote</h2>
+		<Contact></Contact>
+	</section>
 </div>
 
 <style>
